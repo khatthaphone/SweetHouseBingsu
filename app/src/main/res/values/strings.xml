@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sweet House Bingsu</string>
+    <string name="Menu">ເມນູ</string>
+    <string name="Ccontact">ກ່ຽວກັບຮ້ານ</string>
+    <string name="txt_contact_attention">ໝາຍເຫດ : ຕ້ອງໂອນເງິນມັດຈຳມາກ່ອນເຄິ່ງໜຶ່ງ ແລະນຳເອົາລັກຖານການໂອນມາແຈ້ງ ແລະ ຕ້ອງມາບໍ່ໃຫ້ກາຍ 15-20 mn</string>
+    <string name="txt_contact_bank">ເລກບັນຊີ: xxxx xxxx xxxx</string>
+    <string name="txt_contact_facebook">Facebook: XXX XXXX XXXX</string>
+    <string name="txt_contact_tel">ໂທ: XXXX XXXX</string>
+    <string name="txt_contact_thanks">ຂອບໃຈທີ່ໃຊ້ບໍລິການ</string>
+</resources>
