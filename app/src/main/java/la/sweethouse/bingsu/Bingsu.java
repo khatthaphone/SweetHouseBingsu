@@ -1,8 +1,10 @@
 package la.sweethouse.bingsu;
 
 import android.graphics.drawable.Drawable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Bingsu {
+public class Bingsu implements Parcelable {
 
 
     private String name = "";
@@ -11,6 +13,27 @@ public class Bingsu {
     private int priceM;
     private int priceL;
     private int image;
+
+    protected Bingsu(Parcel in) {
+        name = in.readString();
+        description = in.readString();
+        priceS = in.readInt();
+        priceM = in.readInt();
+        priceL = in.readInt();
+        image = in.readInt();
+    }
+
+    public static final Creator<Bingsu> CREATOR = new Creator<Bingsu>() {
+        @Override
+        public Bingsu createFromParcel(Parcel in) {
+            return new Bingsu(in);
+        }
+
+        @Override
+        public Bingsu[] newArray(int size) {
+            return new Bingsu[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -67,5 +90,20 @@ public class Bingsu {
         this.priceM = priceM;
         this.priceL = priceL;
         this.image = image;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeInt(priceS);
+        dest.writeInt(priceM);
+        dest.writeInt(priceL);
+        dest.writeInt(image);
     }
 }
