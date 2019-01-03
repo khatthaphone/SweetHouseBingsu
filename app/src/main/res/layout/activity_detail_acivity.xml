@@ -4,23 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context=".DetailActivity">
 
-    <ImageView
-        android:id="@+id/imv_detail"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:src="@drawable/chocolate_bingsu"
-        android:transitionName="detail_image"/>
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Bingsu"
+        android:textAlignment="center"
         android:textSize="32dp"
-        android:text="Bingsu"/>
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_padding_small"
+        android:layout_marginTop="@dimen/margin_padding"
+        android:layout_marginEnd="@dimen/margin_padding_small"
+        android:layout_weight="3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chocolate_bingsu"
+        android:transitionName="bingsu_image" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,67 +41,72 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="ລາຄາ"/>
+            android:text="ລາຄາ"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
             android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-                android:textAlignment="textEnd"
-                android:text="ຂະໜາດນ້ອຍ: "/>
+                android:text="ຂະໜາດນ້ອຍ: "
+                android:textAlignment="textEnd" />
+
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="29, 000 ກີບ"/>
+                android:layout_weight="1"
+                android:text="29, 000 ກີບ" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
             android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-                android:textAlignment="textEnd"
-                android:text="ຂະໜາດກາງ: "/>
+                android:text="ຂະໜາດກາງ: "
+                android:textAlignment="textEnd" />
+
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="39, 000 ກີບ"/>
+                android:layout_weight="1"
+                android:text="39, 000 ກີບ" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
             android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-                android:textAlignment="textEnd"
-                android:text="ຂະໜາດໃຫຍ່: "/>
+                android:text="ຂະໜາດໃຫຍ່: "
+                android:textAlignment="textEnd" />
+
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="50, 000 ກີບ"/>
+                android:layout_weight="1"
+                android:text="50, 000 ກີບ" />
 
         </LinearLayout>
 

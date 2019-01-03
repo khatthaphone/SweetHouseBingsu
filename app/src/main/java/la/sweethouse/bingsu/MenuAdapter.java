@@ -6,6 +6,7 @@ import android.hardware.display.DisplayManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -22,13 +23,13 @@ import java.util.List;
 
 public class MenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    Activity activity;
+    AppCompatActivity activity;
 
     List<Bingsu> bingsuList;
 
-    public MenuAdapter(Activity activity) {
+    public MenuAdapter(AppCompatActivity activity, List<Bingsu> bingsuList) {
         this.activity = activity;
-        bingsuList = new ArrayList();
+        this.bingsuList = bingsuList;
     }
 
     @NonNull
@@ -36,45 +37,35 @@ public class MenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull final ViewGroup viewGroup, int i) {
         final View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.bingsu_list_item, viewGroup, false);
 
-        final int position = i;
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(viewGroup.getContext(), DetailActivity.class);
-
-                intent.putExtra("bingsu", bingsuList.get(position));
-
-                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view.findViewById(R.id.list_item_image), "detail_image");
-
-                viewGroup.getContext().startActivity(intent, options.toBundle());
-            }
-        });
-
-        // set view height to 1/3 of screen height
-
-//        DisplayMetrics displayMetrics = viewGroup.getContext().getResources().getDisplayMetrics();
-//
-//        ViewGroup.LayoutParams layoutParams = viewGroup.getLayoutParams();
-//        Log.d("Height", "" + layoutParams.height);
-//        layoutParams.height = displayMetrics.heightPixels / 3;
-//        view.setLayoutParams(layoutParams);
-
         return new MenuItemViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-        Bingsu bingsu = bingsuList.get(i);
+    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder viewHolder, int i) {
 
         MenuItemViewHolder holder = (MenuItemViewHolder) viewHolder;
+
+        Bingsu bingsu = bingsuList.get(viewHolder.getAdapterPosition());
 
         holder.tvTitle.setText(bingsu.getName());
 
 //        holder.ivImage.setImageDrawable();
-        Glide.with(viewHolder.itemView)
+        Glide.with(activity)
                 .load(bingsu.getImage())
                 .into(holder.ivImage);
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, DetailActivity.class);
+
+                intent.putExtra("bingsu", bingsuList.get(viewHolder.getAdapterPosition()));
+
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, ((MenuItemViewHolder) viewHolder).ivImage, "bingsu_image");
+
+                activity.startActivity(intent, options.toBundle());
+            }
+        });
 
     }
 
@@ -84,11 +75,6 @@ public class MenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     // include get item view type for multiple view type recycler view
-
-
-    public void setMenuItemList(List<Bingsu> bingsuList) {
-        this.bingsuList = bingsuList;
-    }
 
     public class MenuItemViewHolder extends RecyclerView.ViewHolder {
 

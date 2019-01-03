@@ -37,8 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         bingsuList.add(new Bingsu("Durian", "", 29000, 39000, 50000, R.drawable.durian_bingsu));
         bingsuList.add(new Bingsu("Special", "", 29000, 39000, 50000, R.drawable.promotion_bingsu));
 
-        menuAdapter = new MenuAdapter(this);
-        menuAdapter.setMenuItemList(bingsuList);
+        menuAdapter = new MenuAdapter(this, bingsuList);
 
         rvMenu = findViewById(R.id.recycler_view_menu);
 
