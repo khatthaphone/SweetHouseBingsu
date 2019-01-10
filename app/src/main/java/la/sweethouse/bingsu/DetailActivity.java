@@ -3,6 +3,7 @@ package la.sweethouse.bingsu;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
@@ -30,11 +31,10 @@ public class DetailActivity extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.imv_detail);
 
-//        supportPostponeEnterTransition();
-
         Glide.with(this)
                 .load(bingsu.getImage())
-                .apply((new RequestOptions()).centerCrop().dontAnimate())
+//                .apply((new RequestOptions()).centerCrop().dontAnimate())
+                .apply((new RequestOptions()).centerCrop())
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -49,10 +49,6 @@ public class DetailActivity extends AppCompatActivity {
                     }
                 })
                 .into(imageView);
-//
-//        Glide.with(this)
-//                .load(bingsu.getImage())
-//                .into(imageView);
 
         Log.d("Bingsu", bingsu.getName());
 

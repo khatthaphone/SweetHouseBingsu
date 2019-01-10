@@ -7,4 +7,13 @@
     <string name="txt_contact_facebook">Facebook: XXX XXXX XXXX</string>
     <string name="txt_contact_tel">ໂທ: XXXX XXXX</string>
     <string name="txt_contact_thanks">ຂອບໃຈທີ່ໃຊ້ບໍລິການ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string name="txt_dog">kjsagfwaklsbfkjabfjkhbwejhfioawbfiub ນຮ້ສຫ
+        ຫັ່າດຶ້ຳ່າັເດ
+        ກດ່ຶັຫຮ້ນຳເຶຳນໄຮ້ດັຶຍຳນຣໄຶເັຍໄີຳ້ດນຮຳີໄຶດນເໄຮີຳຶດັາ່ໄຳຶດ່ສາໄຳຶດນຮັຳຶດສັຶໄຳ</string>
 </resources>

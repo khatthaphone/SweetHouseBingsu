@@ -48,17 +48,19 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_padding_extra_large"
+            android:layout_marginEnd="@dimen/margin_padding_extra_large">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
                 android:text="ຂະໜາດນ້ອຍ: "
-                android:textAlignment="textEnd" />
+                android:textAlignment="textStart" />
 
             <TextView
+                android:id="@+id/tv_price_small"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -70,17 +72,19 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_padding_extra_large"
+            android:layout_marginEnd="@dimen/margin_padding_extra_large">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
                 android:text="ຂະໜາດກາງ: "
-                android:textAlignment="textEnd" />
+                android:textAlignment="textStart" />
 
             <TextView
+                android:id="@+id/tv_price_medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -92,17 +96,19 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_padding_extra_large"
+            android:layout_marginEnd="@dimen/margin_padding_extra_large">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
                 android:text="ຂະໜາດໃຫຍ່: "
-                android:textAlignment="textEnd" />
+                android:textAlignment="textStart" />
 
             <TextView
+                android:id="@+id/tv_price_large"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

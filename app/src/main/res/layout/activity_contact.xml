@@ -39,6 +39,7 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
+
         android:text="@string/txt_contact_bank"
         android:textAlignment="center"
         android:textColor="@android:color/white" />
