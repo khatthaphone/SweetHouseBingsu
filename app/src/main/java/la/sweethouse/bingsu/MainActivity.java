@@ -20,18 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
         btnMenu = findViewById(R.id.btn_menu);
         btnContact = findViewById(R.id.btn_contact);
-//
-//        SharedPreferences sharedPref = getSharedPreferences(SHARED_PREF, MODE_PRIVATE);
-//
-//        boolean firstTime = sharedPref.getBoolean("first_time", true);
-//
-//        if (firstTime) {
-//
-//            sharedPref.edit().putBoolean("first_time", false);
+
+        SharedPreferences sharedPref = getSharedPreferences(SHARED_PREF, MODE_PRIVATE);
+
+        boolean firstTime = sharedPref.getBoolean("first_time", true);
+
+        if (firstTime) {
+
+            sharedPref.edit().putBoolean("first_time", false).commit();
 
             Intent intent = new Intent(MainActivity.this, PromoActivity.class);
             startActivity(intent);
-//        }
+        }
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override

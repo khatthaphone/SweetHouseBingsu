@@ -1,11 +1,11 @@
 package la.sweethouse.bingsu;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,14 +16,18 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Bingsu bingsu;
+
+    View vSizeSmall, vSizeMedium, vSizeLarge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_acivity);
 
-        Bingsu bingsu = getIntent().getExtras().getParcelable("bingsu");
+        bingsu = getIntent().getExtras().getParcelable("bingsu");
 
         TextView tvName = findViewById(R.id.tv_name);
 
@@ -50,8 +54,34 @@ public class DetailActivity extends AppCompatActivity {
                 })
                 .into(imageView);
 
-        Log.d("Bingsu", bingsu.getName());
+        vSizeSmall = findViewById(R.id.size_small);
+        vSizeMedium = findViewById(R.id.size_medium);
+        vSizeLarge = findViewById(R.id.size_large);
+
+        vSizeSmall.setOnClickListener(this);
+        vSizeMedium.setOnClickListener(this);
+        vSizeLarge.setOnClickListener(this);
 
     }
 
+    @Override
+    public void onClick(View v) {
+
+        Intent intent = new Intent(DetailActivity.this, CheckoutActivity.class);
+        intent.putExtra("bingsu", bingsu);
+
+        switch (v.getId()) {
+            case R.id.size_small:
+                intent.putExtra("size", "small");
+                break;
+            case R.id.size_medium:
+                intent.putExtra("size", "medium");
+                break;
+            case R.id.size_large:
+                intent.putExtra("size", "large");
+                break;
+        }
+
+        startActivity(intent);
+    }
 }

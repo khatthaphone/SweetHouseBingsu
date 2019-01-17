@@ -2,7 +2,7 @@
     <string name="app_name">Sweet House Bingsu</string>
     <string name="Menu">ເມນູ</string>
     <string name="Ccontact">ກ່ຽວກັບຮ້ານ</string>
-    <string name="txt_contact_attention">ໝາຍເຫດ : ຕ້ອງໂອນເງິນມັດຈຳມາກ່ອນເຄິ່ງໜຶ່ງ ແລະນຳເອົາລັກຖານການໂອນມາແຈ້ງ ແລະ ຕ້ອງມາບໍ່ໃຫ້ກາຍ 15-20 mn</string>
+    <string name="txt_contact_attention">ໝາຍເຫດ : ຕ້ອງໂອນເງິນມັດຈຳມາກ່ອນເຄິ່ງໜຶ່ງ ແລະ ນຳເອົາລັກຖານການໂອນມາແຈ້ງ ແລະ ຕ້ອງມາບໍ່ໃຫ້ກາຍ 15-20 mn</string>
     <string name="txt_contact_bank">ເລກບັນຊີ: xxxx xxxx xxxx</string>
     <string name="txt_contact_facebook">Facebook: XXX XXXX XXXX</string>
     <string name="txt_contact_tel">ໂທ: XXXX XXXX</string>
@@ -12,8 +12,4 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
 
-
-    <string name="txt_dog">kjsagfwaklsbfkjabfjkhbwejhfioawbfiub ນຮ້ສຫ
-        ຫັ່າດຶ້ຳ່າັເດ
-        ກດ່ຶັຫຮ້ນຳເຶຳນໄຮ້ດັຶຍຳນຣໄຶເັຍໄີຳ້ດນຮຳີໄຶດນເໄຮີຳຶດັາ່ໄຳຶດ່ສາໄຳຶດນຮັຳຶດສັຶໄຳ</string>
 </resources>

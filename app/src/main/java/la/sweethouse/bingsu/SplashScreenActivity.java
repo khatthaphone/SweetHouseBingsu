@@ -14,14 +14,24 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         View rootView = findViewById(R.id.splash_screen_view);
 
-//        rootView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-//            }
-//        });
+        Thread timer = new Thread() {
+            @Override
+            public void run() {
+                super.run();
+
+                try {
+                    sleep(1500);
+                    Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+
+                }
+            }
+        };
+
+        timer.start();
+
 
     }
 }

@@ -21,7 +21,7 @@
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ຕອນຮ້ັບລະດູຮ້ອນ"
+        android:text="ຕອນຮັບລະດູຮ້ອນ"
         android:textSize="32sp"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"/>
