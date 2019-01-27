@@ -4,68 +4,284 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".ContactActivity">
 
-    <TextView
-        android:id="@+id/txt_contact_tel"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/txt_contact_facebook"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="@string/txt_contact_tel"
-        android:textAlignment="center"
-        android:textColor="@android:color/white" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txt_contact_facebook"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/txt_contact_bank"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="@string/txt_contact_facebook"
-        android:textAlignment="center"
-        android:textColor="@android:color/white" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_contact_bank"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/txt_contact_attention"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-
-        android:text="@string/txt_contact_bank"
-        android:textAlignment="center"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:id="@+id/txt_contact_attention"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="@string/txt_contact_attention"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_light"  />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/txt_contact_thanks"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_contact_attention"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="@string/txt_contact_thanks"
-        android:textAlignment="center"
-        android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/txt_contact_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/txt_contact_tel"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txt_contact_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/txt_contact_facebook"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txt_contact_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/txt_contact_bank"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txt_contact_attention"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/txt_contact_attention"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light" />
+
+
+                <TextView
+                    android:id="@+id/txt_contact_thanks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/txt_contact_thanks"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_padding_extra_large"
+                android:paddingBottom="@dimen/margin_padding_extra_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_large"
+                    android:gravity="center"
+                    android:text="ອາຈານນຳພາ"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/lecturer" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/lecturer_name"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/lecturer_detail" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_padding_extra_large"
+                android:paddingBottom="@dimen/margin_padding_extra_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_large"
+                    android:gravity="center"
+                    android:text="ນັກອອກແບບ"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/paeng" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/name_paeng"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/student_detail" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_padding_extra_large"
+                android:paddingBottom="@dimen/margin_padding_extra_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_large"
+                    android:gravity="center"
+                    android:text="ຜູ້ຊອກຫາຂໍ້ມູນ"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/touk" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/name_touk"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/student_detail" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_padding_extra_large"
+                android:paddingBottom="@dimen/margin_padding_extra_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_large"
+                    android:gravity="center"
+                    android:text="ຜູ້ຊອກຫາຂໍ້ມູນ"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/tock" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/name_tock"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/student_detail" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_padding_extra_large"
+                android:paddingBottom="@dimen/margin_padding_extra_large">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_large"
+                    android:gravity="center"
+                    android:text="ໂປຣແກຣມເມີ"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/taii" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/name_taii"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/student_detail" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </RelativeLayout>

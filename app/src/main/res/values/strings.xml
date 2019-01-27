@@ -11,5 +11,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="lecturer_name">ອຈ ປທ. ສະຫວາດ ໄຊປະດິດ</string>
+    <string name="student_detail">ນັກສຶກສາ ຫ້ອງ 3IT (2018-2019) ພາກວິຊາວິສະວະກຳຄອມພິວເຕີ ແລະ ເຕັກໂນໂລຊີຂໍ້ມຄນຂ່າວສານ ຄະນະວິສະວະກຳສາດ ມະຫາວິທະຍາໄລແຫ່ງຊາດລາວ</string>
+    <string name="lecturer_detail">ອາຈານປະຈຳ ພາກວິຊາວິສະວະກຳຄອມພິວເຕີ ແລະ ເຕັກໂນໂລຊີຂໍ້ມຄນຂ່າວສານ ຄະນະວິສະວະກຳສາດ ມະຫາວິທະຍາໄລແຫ່ງຊາດລາວ  saypadith@fe-nuol.edu.la</string>
+    <string name="name_paeng">ນ. ສິລິສາ ສີວິໄຊ</string>
+    <string name="name_touk">ນ. ຕຸກກິຕາ ຫຼ້າທະຄິນພອນ</string>
+    <string name="name_tock">ທ. ໄພມະນີ ແກ້ວມະນີ</string>
+    <string name="name_taii">ທ. ຄັດຖະພອນ ຕະມອງຊຄມ່ວງໄຊ</string>
 
 </resources>

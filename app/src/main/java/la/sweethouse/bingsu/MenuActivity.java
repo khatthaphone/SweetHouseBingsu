@@ -21,15 +21,14 @@ public class MenuActivity extends AppCompatActivity {
 
         List<Bingsu> bingsuList = new ArrayList<>();
 
-        bingsuList.add(new Bingsu("Chocolate", "", 29000, 39000, 50000, R.drawable.chocolate_bingsu));
-        bingsuList.add(new Bingsu("Chocolate", "", 29000, 39000, 50000, R.drawable.adzuki_bean_bingsu));
-        bingsuList.add(new Bingsu("Chocolate", "", 29000, 39000, 50000, R.drawable.black_bean_bingsu));
-        bingsuList.add(new Bingsu("Cendal", "", 29000, 39000, 50000, R.drawable.cendal_bingsu));
-        bingsuList.add(new Bingsu("Jumbo", "", 29000, 39000, 50000, R.drawable.jumbo_bingsu));
-        bingsuList.add(new Bingsu("Matcha", "", 29000, 39000, 50000, R.drawable.matcha_bingsu));
-        bingsuList.add(new Bingsu("Melon", "", 29000, 39000, 50000, R.drawable.melon_bingsu));
-        bingsuList.add(new Bingsu("Durian", "", 29000, 39000, 50000, R.drawable.durian_bingsu));
-        bingsuList.add(new Bingsu("Special", "", 29000, 39000, 50000, R.drawable.promotion_bingsu));
+        bingsuList.add(new Bingsu("ຊັອກໂກແລັດ", "", 29000, 39000, 50000, R.drawable.chocolate_bingsu));
+        bingsuList.add(new Bingsu("ໂອຣິໂອ", "", 29000, 39000, 50000, R.drawable.adzuki_bean_bingsu));
+        bingsuList.add(new Bingsu("ຖົ່ວແດງ", "", 29000, 39000, 50000, R.drawable.black_bean_bingsu));
+        bingsuList.add(new Bingsu("ລອດຊ່ອງ", "", 29000, 39000, 50000, R.drawable.cendal_bingsu));
+        bingsuList.add(new Bingsu("ໝາກໄມ້ລວມ", "", 29000, 39000, 50000, R.drawable.jumbo_bingsu));
+        bingsuList.add(new Bingsu("ຊາຂຽວ", "", 29000, 39000, 50000, R.drawable.matcha_bingsu));
+        bingsuList.add(new Bingsu("ແຄນຕາລຸກ", "", 29000, 39000, 50000, R.drawable.melon_bingsu));
+        bingsuList.add(new Bingsu("ຖົ່ວລຽນ", "", 29000, 39000, 50000, R.drawable.durian_bingsu));
 
         menuAdapter = new MenuAdapter(this, bingsuList);
 

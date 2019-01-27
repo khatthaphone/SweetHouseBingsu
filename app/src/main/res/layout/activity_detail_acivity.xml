@@ -10,12 +10,14 @@
 
 
     <TextView
+        android:transitionName="bingsu_title"
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:text="Bingsu"
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="32dp"
         android:textStyle="bold" />
